@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorting Algorithm Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sorting Algorithm Visualizer</h1>
+    
+    <div class="controls">
+      <select id="algorithm">
+        <option value="bubbleSort">Bubble Sort</option>
+        <option value="selectionSort">Selection Sort</option>
+        <option value="insertionSort">Insertion Sort</option>
+        <option value="mergeSort">Merge Sort</option>
+        <option value="quickSortLomuto">Quick Sort (Lomuto Partition)</option>
+        <option value="quickSortHoare">Quick Sort (Hoare Partition)</option>
+        <option value="cycleSort">Cycle Sort</option>
+        <option value="heapSort">Heap Sort</option>
+        <option value="countingSort">Counting Sort</option>
+        <option value="radixSort">Radix Sort</option>
+        <option value="bucketSort">Bucket Sort</option>
+      </select>
+      
+      <div class="slider-container">
+        <label for="size">Size:</label>
+        <input type="range" id="size" min="5" max="100" value="30">
+        <span id="sizeValue">30</span>
+      </div>
+      
+      <div class="slider-container">
+        <label for="speed">Speed:</label>
+        <input type="range" id="speed" min="1" max="100" value="50">
+        <span id="speedValue">50</span>
+      </div>
+      
+      <button id="generate">Generate New Array</button>
+      <button id="sort">Start Sorting</button>
+    </div>
+    
+    <div class="visualization" id="visualization"></div>
+    
+    <div class="stats">
+      <p><strong>Algorithm:</strong> <span id="currentAlgorithm">Bubble Sort</span></p>
+      <p><strong>Comparisons:</strong> <span id="comparisons">0</span></p>
+      <p><strong>Swaps:</strong> <span id="swaps">0</span></p>
+      <p><strong>Time:</strong> <span id="time">0</span> ms</p>
+    </div>
+  </div>
+
+  <script src="js.js"></script>
+</body>
+</html>
